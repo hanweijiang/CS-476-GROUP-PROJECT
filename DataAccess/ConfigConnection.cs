@@ -12,7 +12,7 @@ namespace DataAccess
     {
         public static string GetSqlConnStr(string connsectionName)
         {
-            ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();//创建ConfigurationBuilder对象
+            ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
             configurationBuilder.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
             var configuration = configurationBuilder.Build();
             return configuration[connsectionName];
